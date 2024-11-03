@@ -5,3 +5,9 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+:root {
+  --header-color: #d8d8d8;
+  --gender-color: #a0a0a0;
+  --profession-color: #a0a0a0;
+}
