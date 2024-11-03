@@ -1,11 +1,14 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootPage from "./routes/root";
-import "./index.css";
-import Layout from "./routes/layout";
 import { Provider } from "react-redux";
-import { store } from "./lib/store";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor, store } from "./features/core/store";
+import Layout from "./routes/layout";
+import RootPage from "./routes/root";
+
+import EmployeesDetailPage from "@/routes/employees-detail";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +16,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <RootPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "employees/:id",
+    element: (
+      <Layout>
+        <EmployeesDetailPage />
       </Layout>
     ),
   },
@@ -25,7 +36,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <PersistGate persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 );
