@@ -8,7 +8,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <main className="my-10">{children}</main>
+      <main className="max-w-screen-lg m-auto my-10">{children}</main>
     </>
   );
 };
