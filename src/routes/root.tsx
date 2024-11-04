@@ -40,7 +40,7 @@ export default function RootPage() {
 
   return (
     <div className="flex flex-col">
-      <div className="flex items-center justify-end mb-8 lg:pr-7 mx-4 my-10 lg:mx-0 lg:my-0">
+      <div className="flex items-center justify-end mx-4 my-10 mb-8 lg:pr-7 lg:mx-0 lg:my-0">
         <SearchInput onChange={(e) => setSearch(e.target.value)} />
       </div>
       <div className="flex flex-col items-center justify-center mb-12">
@@ -49,7 +49,7 @@ export default function RootPage() {
           There are more than 100k
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 m-auto lg:m-0">
+      <div className="grid grid-cols-1 gap-4 m-auto sm:grid-cols-2 lg:grid-cols-3 lg:m-0">
         {filteredEmployees ? (
           filteredEmployees.map((employee) => (
             <Card key={employee.id} details={employee} />
