@@ -7,8 +7,8 @@ export default function EmployeesDetailPage() {
   const { data: employee, isFetching } = useGetEmployeeQuery(Number(id));
 
   return (
-    <div className="flex">
-      <div className="flex flex-1 w-[50%]">
+    <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-1 lg:w-[50%]">
         {isFetching ? (
           <img className="object-cover w-full h-[600px] bg-gray-200 animate-pulse" />
         ) : (
@@ -19,7 +19,7 @@ export default function EmployeesDetailPage() {
           />
         )}
       </div>
-      <div className="flex flex-1 w-[50%] flex-col">
+      <div className="flex flex-1 lg:w-[50%] flex-col">
         <div className="px-4">
           <h3 className="mb-2 text-2xl font-semibold text-gray-800">
             {isFetching
