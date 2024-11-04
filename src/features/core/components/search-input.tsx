@@ -4,9 +4,9 @@ interface Props {
 
 export const SearchInput = ({ onChange }: Props) => {
   return (
-    <div className="relative">
+    <div className="relative w-full md:w-auto">
       <input
-        className="p-2 pr-10 text-black border border-slate-400 rounded-xl"
+        className="w-full p-2 pr-10 text-black border border-slate-400 rounded-xl md:w-64"
         type="search"
         placeholder="Search"
         onChange={onChange}
