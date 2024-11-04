@@ -12,7 +12,7 @@ A React application built with Vite for managing Oompa Loompa crew members.
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/raskardev/napptilus-test
 cd napptilus-test
 ```
 
