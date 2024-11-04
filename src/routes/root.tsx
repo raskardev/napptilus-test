@@ -44,7 +44,7 @@ export default function RootPage() {
         <SearchInput onChange={(e) => setSearch(e.target.value)} />
       </div>
       <div className="flex flex-col items-center justify-center mb-12">
-        <h1 className="p-2 text-5xl">Find your Oompa Loompa</h1>
+        <h2 className="p-2 text-5xl">Find your Oompa Loompa</h2>
         <p className="text-3xl text-zinc-500">There are more than 100k</p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -53,7 +53,7 @@ export default function RootPage() {
             <Card key={employee.id} details={employee} />
           ))
         ) : (
-          <p className="text-2xl">No employees found</p>
+          <span className="text-2xl">No employees found</span>
         )}
       </div>
       {isFetching ? <p className="text-2xl text-center">Loading...</p> : null}
