@@ -3,11 +3,12 @@ import * as ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
+
 import { persistor, store } from "./features/core/store";
+import EmployeesDetailPage from "./routes/employees-detail";
 import Layout from "./routes/layout";
 import RootPage from "./routes/root";
 
-import EmployeesDetailPage from "@/routes/employees-detail";
 import "./index.css";
 
 const router = createBrowserRouter([
